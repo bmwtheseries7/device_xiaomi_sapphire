@@ -11,20 +11,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sapphire device
 $(call inherit-product, device/xiaomi/sapphire/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AfterlifeOS stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Device configs
+AFTERLIFE_MAINTAINER := BMWxKIBRIA
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES = 1080
-TARGET_HAS_UDFPS := true
+TARGET_UDFPS_ANIMATIONS := true
 
-# Extra Stuffs
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_MINI_GAPPS := true
-TARGET_ENABLE_BLUR := false
-EVO_BUILD_TYPE := Official
-
-PRODUCT_NAME := lineage_sapphire
+PRODUCT_NAME := afterlife_sapphire
 PRODUCT_DEVICE := sapphire
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
