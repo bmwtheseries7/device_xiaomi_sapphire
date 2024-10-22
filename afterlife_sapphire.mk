@@ -30,6 +30,9 @@ TARGET_INCLUDE_GBOARD := true
 TARGET_INCLUDE_MAPS := true
 TARGET_INCLUDE_MESSAGES := true
 
+# Include our private certificate
+-include vendor/atiga-priv/keys/keys.mk
+
 PRODUCT_NAME := afterlife_sapphire
 PRODUCT_DEVICE := sapphire
 PRODUCT_MANUFACTURER := Xiaomi
